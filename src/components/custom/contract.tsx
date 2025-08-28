@@ -3,6 +3,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { X, MessageCircle } from "lucide-react";
 import { flashVariants, pulseVariants } from "@/lib/utils";
+import Image from "next/image";
 const Contract = () => {
   const [activeButton, setActiveButton] = React.useState("HOME DIMENSION");
 
@@ -71,7 +72,7 @@ const Contract = () => {
         whileTap="tap"
         {...hoverVariants}
       >
-        <img src={"/dex-screener.png"} alt="dex icon" width={32} height={32} />
+        <Image src="/dex-screener.png" alt="dex icon" width={32} height={32} />
         Join The DEXSCREENER
       </motion.a>
 

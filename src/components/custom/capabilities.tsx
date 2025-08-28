@@ -170,7 +170,7 @@ const Capabilities = () => {
             transition={{ duration: 0.5 }}
           >
             <motion.p variants={colorCycleVariants} animate="animate">
-              If you stare at your reflection and say 'I'M LOVIN' IT' three
+              If you stare at your reflection and say "I'M LOVIN" IT three
               times, your pupils will temporarily become golden arches
             </motion.p>
           </motion.div>

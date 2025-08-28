@@ -1,5 +1,4 @@
 "use client";
-import { appConfig } from "@/config";
 import { flashVariants, pulseVariants } from "@/lib/utils";
 
 import { motion } from "framer-motion";
