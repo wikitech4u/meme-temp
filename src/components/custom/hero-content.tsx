@@ -154,7 +154,7 @@ const HeroContent = () => {
           >
             {feinModeActive
               ? `🔴 ${appConfig.hero.feinModeDeactiveBTN} 🔴`
-              : `🟢 ${appConfig.hero.feinModeDeactiveBTN} 🟢`}
+              : `🟢 ${appConfig.hero.feinModeActiveBTN} 🟢`}
           </motion.button>
 
           {/* Audio Toggle Button */}
