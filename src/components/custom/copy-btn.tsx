@@ -12,22 +12,22 @@ const CopyBtn = () => {
       return;
     }
     navigator.clipboard
-      .writeText(appConfig.contract_section.contractAddress)
-      .then(() => toast.success("Copied to clipboard"))
+      .writeText(appConfig.social_section.contractAddress)
+      .then()
       .catch((err) => toast.error("Failed to copy: " + err));
   };
   return (
     <>
       <Button
         onClick={handleClick}
-        className="bg-transparent hover:bg-primary hover:text-accent"
-        variant={"outline"}
+        className="bg-transparent hover:text-yellow-500"
+        variant={"link"}
         size={"lg"}
       >
         <Copy />
-        {appConfig.contract_section.copyBtn}
+        {appConfig.social_section.copyBtn}
       </Button>
-      <Toaster  richColors position="top-center"/>
+      <Toaster richColors position="top-center" />
     </>
   );
 };

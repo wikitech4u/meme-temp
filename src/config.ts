@@ -10,16 +10,16 @@ export const appConfig = {
   // SEO and metadata
   metadata: {
     // Basic metadata
-    title: "Sample - Official website",
+    title: "$FYH- Official website",
     description:
       "Sample is a meme coin with no intrinsic value or expectation of financial return.",
     // Open Graph tags for social sharing
     openGraph: {
-      title: "Sample - official website",
+      title: "$FYH - official website",
       description: "Meet Sample",
-      siteName: "Sample",
+      siteName: "$FYH",
       image: {
-        url: "/banner-2.avif",
+        url: "/banner-share.gif",
         width: 484,
         height: 482,
         alt: "Sample - official website Sample",
@@ -43,17 +43,17 @@ export const appConfig = {
       apple: "/apple-touch-icon.png",
     },
   },
-  logo: "$AMPLE",
+  logo: "$FYH",
   header: {
     store: {
-      url: "https://store.fun/purrcy",
+      url: "https://pump.fun/board",
       text: "$BUY NOW",
     },
   },
 
   hero: {
     twitter: {
-      url: "https://x.com/purrcyforsale",
+      url: "https://x.com/",
       text: "Twitter",
     },
 
@@ -67,58 +67,23 @@ export const appConfig = {
     heroSpiningIcon: "🖕🏼",
     subTitle: "The Revolution against system lies begin here",
   },
-  contract_section: {
-    title: "/title-4.avif",
-    contractAddress: "3BWH8cDy6djTDhf6FZrMkXBxdbMuidV9wmNW5zPQbonk",
+  social_section: {
+    title: "HOME DIMENSION",
     copyBtn: "Copy Address",
-    background: "/background-4.gif",
-    warning: "Verify contract address: Trust no one",
-    cards: [
-      {
-        ferry: "/ferry-1.gif",
-        banner: "/banner-3.avif",
-      },
-      {
-        ferry: "/ferry-2.gif",
-        banner: "/banner-4.avif",
-      },
-      {
-        ferry: "/ferry-3.gif",
-        banner: "/banner-5.avif",
-      },
-    ],
-  },
+    contractAddress: "3BWH8cDy6djTDhf6FZrMkXBxdbMuidV9wmNW5zPQbonk",
+    xBTN: {
+      title: " JOIN THE $FYH (X Community)",
+      url: "https://x.com/",
+    },
+    telegramBTN: {
+      title: " JOIN THE TELEGRAM",
+      url: "https://t.me/",
+    },
 
-  capabilites: {
-    title: "$ample Capabilities",
-    subTitle: "Tools for the awakened",
-    items: [
-      {
-        img: "/statue.avif",
-        title: "Unhackable",
-        description: "Anonymous, Decentralized, Unstoppable.",
-        alt: "Unhackable",
-      },
-      {
-        img: "/dolphin.gif",
-        title: "Decentralized",
-        description: "No central authority,Power to the people",
-        alt: "Decentralized",
-      },
-      {
-        img: "/cheap.avif",
-        title: "Delfationary",
-        description: "Burns the old system. Builds the new systems.",
-        alt: "Deflationary",
-      },
-      {
-        img: "/discount.avif",
-        title: "Community Driven",
-        description: "Built by belivers, Owned by all. Run by community",
-        alt: "Community",
-      },
-    ],
-    footerTitle: "The tools you need. The power you deserve",
+    dexscreenerBTN: {
+      title: "Join The DEXSCREENER",
+      url: "https://dexscreener.com/",
+    },
   },
   prophecies_section: {
     title: "$FYH OF THE DAY",
@@ -146,27 +111,28 @@ export const appConfig = {
       "EVERY TIME SOMEONE SAYS 'I'M LOVIN' IT' ONLINE, A BURGER GROWS AN EXTRA PICKLE",
       "THE MOST POWERFUL COMPUTER IS THE ONE MADE FROM CRUSHED MCNUGGETS AND SPECIAL SAUCE",
     ],
+    leaks: {
+      title: "$FYHLEAKS",
+      revealedBTN: "REVEAL BURGER TRUTH",
+      hideBTN: "HIDE BURGER TRUTH",
+      secret:
+        " If you stare at your reflection and say I'M LOVIN IT three times, your pupils will temporarily become golden arches",
+    },
   },
-
-  intro: {
-    backgroundImg: "/background.gif",
-    title: "THE $AMPLE",
-    subTitle: "Decentralize, Unstoppable, Ungovernable.",
-    items: [
-      "/title-2.avif",
-      "/title-3.avif",
-      "/title-4.avif",
-      "/title-6.avif",
-      "/title-7.avif",
-      "/background-4.gif",
-      "/badge.avif",
-      "/coins.avif",
+  floating_images: {
+    images: [
+      { src: "/float-1.webp", alt: "FLOATING MCDC SQUARE 1" },
+      { src: "/float-2.webp", alt: "FLOATING MCDC SQUARE 2" },
+      { src: "/float-3.avif", alt: "FLOATING MCDC SQUARE 3" },
+      { src: "/float-4.avif", alt: "FLOATING MCDC SQUARE 4" },
+      { src: "/float-5.webp", alt: "FLOATING MCDC SQUARE 5" },
+      { src: "/float-6.webp", alt: "FLOATING MCDC SQUARE 6" },
+      { src: "/float-7.avif", alt: "FLOATING MCDC SQUARE 7" },
     ],
-    bottomImg: "/banner.avif",
   },
 
   footer: {
-    title: "Join the $ample",
+    title: "Join the $FYH",
     cards: [
       {
         icon: Twitter,

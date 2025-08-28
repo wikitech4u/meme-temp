@@ -16,6 +16,7 @@ import {
   titleFlashVariants,
   titleGlitchVariants,
 } from "@/lib/utils";
+import CopyBtn from "./copy-btn";
 const HeroContent = () => {
   const [feinModeActive, setFeinModeActive] = useState(false);
   const [audioEnabled, setAudioEnabled] = useState(false);
@@ -184,15 +185,15 @@ const HeroContent = () => {
           whileHover={{ scale: 1.03, rotate: 1 }}
           whileTap={{ scale: 0.95 }}
         >
-          {appConfig.contract_section.contractAddress}
+          {appConfig.social_section.contractAddress}
         </motion.div>
 
         <motion.div
-          className="ca-copy-hint text-sm mt-2"
+          className=" text-sm mt-2 flex items-center justify-center"
           animate={{ opacity: [0.6, 1, 0.6] }}
           transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
         >
-          👆 CLICK TO COPY 👆
+          <CopyBtn />
         </motion.div>
       </motion.div>
     </>

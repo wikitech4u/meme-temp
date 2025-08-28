@@ -10,7 +10,7 @@ import {
   pulseVariants,
   shakeVariants,
 } from "@/lib/utils";
-const Capabilities = () => {
+const Prophecies = () => {
   const [revealedTruth, setRevealedTruth] = React.useState(false);
 
   return (
@@ -120,7 +120,7 @@ const Capabilities = () => {
         </motion.div>
       </motion.div>
 
-      {/* McLeaks */}
+      {/* FYLeaks */}
       <motion.div
         className="h-72 flex flex-col relative border-4 border-yellow-400 p-4 bg-red-500/80"
         style={{
@@ -139,7 +139,7 @@ const Capabilities = () => {
           variants={colorCycleVariants}
           animate="animate"
         >
-          👁️ $FYHLEAKS 👁️
+          👁️ {appConfig.prophecies_section.leaks.title} 👁️
         </motion.h2>
 
         <motion.button
@@ -155,7 +155,9 @@ const Capabilities = () => {
           whileTap={{ scale: 0.95 }}
           onClick={() => setRevealedTruth(!revealedTruth)}
         >
-          {revealedTruth ? "HIDE BURGER TRUTH" : "REVEAL BURGER TRUTH"}
+          {revealedTruth
+            ? appConfig.prophecies_section.leaks.hideBTN
+            : appConfig.prophecies_section.leaks.revealedBTN}
         </motion.button>
 
         {revealedTruth && (
@@ -170,8 +172,7 @@ const Capabilities = () => {
             transition={{ duration: 0.5 }}
           >
             <motion.p variants={colorCycleVariants} animate="animate">
-              If you stare at your reflection and say "I'M LOVIN" IT three
-              times, your pupils will temporarily become golden arches
+              {appConfig.prophecies_section.leaks.secret}
             </motion.p>
           </motion.div>
         )}
@@ -180,4 +181,4 @@ const Capabilities = () => {
   );
 };
 
-export default Capabilities;
+export default Prophecies;

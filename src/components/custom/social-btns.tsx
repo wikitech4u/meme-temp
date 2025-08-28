@@ -4,7 +4,8 @@ import { motion } from "framer-motion";
 import { X, MessageCircle } from "lucide-react";
 import { flashVariants, pulseVariants } from "@/lib/utils";
 import Image from "next/image";
-const Contract = () => {
+import { appConfig } from "@/config";
+const SocialButtons = () => {
   const [activeButton, setActiveButton] = React.useState("HOME DIMENSION");
 
   const hoverVariants = {
@@ -51,12 +52,12 @@ const Contract = () => {
         onClick={() => setActiveButton("HOME DIMENSION")}
         {...hoverVariants}
       >
-        HOME DIMENSION
+        {appConfig.social_section.title}
       </motion.button>
 
       {/* Official X Account Link */}
       <motion.a
-        href="https://x.com/MCDC_sol"
+        href={appConfig.social_section.dexscreenerBTN.url}
         target="_blank"
         rel="noopener noreferrer"
         className="relative overflow-hidden cursor-pointer px-6 gap-3 py-3 border-4 border-yellow-400 font-bold text-xl text-yellow-400 bg-black flex items-center justify-center w-full sm:w-auto transition-all duration-300 no-underline"
@@ -73,12 +74,12 @@ const Contract = () => {
         {...hoverVariants}
       >
         <Image src="/dex-screener.png" alt="dex icon" width={32} height={32} />
-        Join The DEXSCREENER
+        {appConfig.social_section.dexscreenerBTN.title}
       </motion.a>
 
       {/* Join the McDimension Link */}
       <motion.a
-        href="https://x.com/i/communities/1931336303938867215"
+        href={appConfig.social_section.xBTN.url}
         target="_blank"
         rel="noopener noreferrer"
         className="relative overflow-hidden cursor-pointer px-6 py-3 border-4 border-yellow-400 font-bold text-xl text-yellow-400 bg-red-500 flex items-center justify-center w-full sm:w-auto transition-all duration-300 no-underline"
@@ -94,12 +95,12 @@ const Contract = () => {
         {...hoverVariants}
       >
         <X className="inline-block mr-2" size={24} />
-        JOIN THE $FYH (X Community)
+        {appConfig.social_section.xBTN.title}
       </motion.a>
 
       {/* Telegram Link */}
       <motion.a
-        href="https://t.me/mcdcportal"
+        href={appConfig.social_section.telegramBTN.url}
         target="_blank"
         rel="noopener noreferrer"
         className="relative overflow-hidden cursor-pointer px-6 py-3 border-4 border-blue-400 font-bold text-xl text-blue-400 bg-blue-600 flex items-center justify-center w-full sm:w-auto transition-all duration-300 no-underline"
@@ -115,10 +116,10 @@ const Contract = () => {
         {...hoverVariants}
       >
         <MessageCircle className="inline-block mr-2" size={24} />
-        JOIN THE TELEGRAM
+        {appConfig.social_section.telegramBTN.title}
       </motion.a>
     </div>
   );
 };
 
-export default Contract;
+export default SocialButtons;

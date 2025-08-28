@@ -5,6 +5,7 @@ import { appConfig } from "@/config";
 import { OpenGraphType } from "next/dist/lib/metadata/types/opengraph-types";
 import Navbar from "@/components/custom/nav-bar";
 import Blur from "@/components/custom/blur";
+import CustomCursor from "@/components/custom/custom-cursor";
 
 export const metadata: Metadata = {
   title: appConfig.metadata.title,
@@ -61,6 +62,7 @@ export default function RootLayout({
           <Blur img="/fullBackGround.jpg" />
         </div>
         <Navbar />
+        <CustomCursor emoji="🖕🏼" glowColor="#4ecdc4" />
         {children}
       </body>
     </html>

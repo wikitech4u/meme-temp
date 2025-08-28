@@ -5,13 +5,13 @@ import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 
 const Manifesto = () => {
-  const [currentTime, setCurrentTime] = useState(new Date());
+  const [currentTime, setCurrentTime] = useState<Date | null>(null);
 
   useEffect(() => {
+    setCurrentTime(new Date()); // first render after hydration
     const timer = setInterval(() => {
       setCurrentTime(new Date());
     }, 1000);
-
     return () => clearInterval(timer);
   }, []);
 
@@ -106,7 +106,7 @@ const Manifesto = () => {
           variants={timeFlashVariants}
           animate="animate"
         >
-          {formatTime(currentTime)}
+          {currentTime ? formatTime(currentTime) : "--:--:--"}
         </motion.span>
       </div>
     </div>
