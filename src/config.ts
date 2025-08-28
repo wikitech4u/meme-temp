@@ -65,6 +65,10 @@ export const appConfig = {
     heroTicker: "$FYH",
     heroSpiningTitle: " I'M LOVIN' IT",
     heroSpiningIcon: "🖕🏼",
+    feinModeActiveBTN: "ACTIVATE FEIN MODE",
+    feinModeDeactiveBTN: "DEACTIVATE FEIN MODE",
+    activeAudioBTN: "AWAKEN MCSOUNDS",
+    deActiveAudioBTN: "SILENCE MCSOUNDS",
     subTitle: "The Revolution against system lies begin here",
   },
   social_section: {

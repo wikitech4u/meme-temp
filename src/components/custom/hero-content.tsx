@@ -21,6 +21,17 @@ const HeroContent = () => {
   const [feinModeActive, setFeinModeActive] = useState(false);
   const [audioEnabled, setAudioEnabled] = useState(false);
 
+  const toggleFein = () => {
+    const next = !feinModeActive;
+    setFeinModeActive(next);
+    // dispatch global event the page can listen to
+    if (typeof window !== "undefined") {
+      window.dispatchEvent(
+        new CustomEvent("fein-mode", { detail: { active: next } })
+      );
+    }
+  };
+
   return (
     <>
       <div className="space-y-4">
@@ -137,13 +148,13 @@ const HeroContent = () => {
             }}
             variants={buttonPulseVariants}
             animate="animate"
-            onClick={() => setFeinModeActive(!feinModeActive)}
+            onClick={toggleFein}
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.95 }}
           >
             {feinModeActive
-              ? "🔴 DEACTIVATE FEIN MODE 🔴"
-              : "🟢 ACTIVATE FEIN MODE 🟢"}
+              ? `🔴 ${appConfig.hero.feinModeDeactiveBTN} 🔴`
+              : `🟢 ${appConfig.hero.feinModeDeactiveBTN} 🟢`}
           </motion.button>
 
           {/* Audio Toggle Button */}
@@ -160,7 +171,9 @@ const HeroContent = () => {
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.95 }}
           >
-            {audioEnabled ? "🔊 SILENCE MCSOUNDS" : "🔇 AWAKEN MCSOUNDS"}
+            {audioEnabled
+              ? `🔊 ${appConfig.hero.deActiveAudioBTN}`
+              : `🔇 ${appConfig.hero.activeAudioBTN}`}
           </motion.button>
         </div>
       </div>
@@ -180,7 +193,7 @@ const HeroContent = () => {
         </motion.div>
 
         <motion.div
-          className="cursor-pointer select-all  bg-black text-yellow-500 p-4 rounded"
+          className="cursor-pointer select-all bg-black text-yellow-500 p-4 rounded break-words text-sm sm:text-base"
           title="Click to copy"
           whileHover={{ scale: 1.03, rotate: 1 }}
           whileTap={{ scale: 0.95 }}

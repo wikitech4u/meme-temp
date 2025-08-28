@@ -1,24 +1,25 @@
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-
 import { clsx, type ClassValue } from "clsx";
+import { Transition, Variants } from "framer-motion";
 import { twMerge } from "tailwind-merge";
 
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
 }
 
-export const rotateSpinVariants = {
+// Rotate spin
+export const rotateSpinVariants: Variants = {
   animate: {
     rotate: 360,
     transition: {
       duration: 10,
       repeat: Infinity,
-      ease: "linear" as any,
+      ease: "linear",
     },
   },
 };
 
-export const glitchVariants = {
+// Glitch effect
+export const glitchVariants: Variants = {
   animate: {
     clipPath: [
       "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
@@ -33,35 +34,38 @@ export const glitchVariants = {
     transition: {
       duration: 2,
       repeat: Infinity,
-      ease: "easeInOut" as any,
+      ease: "easeInOut",
     },
   },
 };
 
-export const shakeVariants = {
+// Shake
+export const shakeVariants: Variants = {
   animate: {
     x: [0, -2, 2, -1, 1, 0],
     rotate: [0, 1, -1, 0.5, -0.5, 0],
     transition: {
       duration: 0.5,
       repeat: Infinity,
-      ease: "easeInOut" as any,
+      ease: "easeInOut",
     },
   },
 };
 
-export const colorCycleVariants = {
+// Color cycle
+export const colorCycleVariants: Variants = {
   animate: {
     color: ["#FF0000", "#FFD700", "#FF6B35", "#FF0000"],
     transition: {
       duration: 2,
       repeat: Infinity,
-      ease: "easeInOut" as any,
+      ease: "easeInOut",
     },
   },
 };
 
-export const flashVariants = {
+// Flash
+export const flashVariants: Variants = {
   animate: {
     opacity: [1, 0.3, 1, 0.7, 1],
     boxShadow: [
@@ -72,21 +76,25 @@ export const flashVariants = {
     transition: {
       duration: 0.5,
       repeat: Infinity,
-      ease: "easeInOut" as any,
+      ease: "easeInOut",
     },
   },
 };
-export const pulseVariants = {
+
+// Pulse
+export const pulseVariants: Variants = {
   animate: {
     scale: [1, 1.05, 1],
     transition: {
       duration: 2,
       repeat: Infinity,
-      ease: "easeInOut" as any,
+      ease: "easeInOut",
     },
   },
 };
-export const titleGlitchVariants = {
+
+// Title glitch
+export const titleGlitchVariants: Variants = {
   animate: {
     clipPath: [
       "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
@@ -101,22 +109,25 @@ export const titleGlitchVariants = {
     transition: {
       duration: 1,
       repeat: Infinity,
-      ease: "easeInOut" as any,
+      ease: "easeInOut",
     },
   },
 };
-export const titleFlashVariants = {
+
+// Title flash
+export const titleFlashVariants: Variants = {
   animate: {
     opacity: [1, 0.98, 0.3, 0.97, 1],
     transition: {
       duration: 0.5,
       repeat: Infinity,
-      ease: "easeInOut" as any,
+      ease: "easeInOut",
     },
   },
 };
 
-export const spinningBurgerVariants = {
+// Spinning burger
+export const spinningBurgerVariants: Variants = {
   animate: {
     rotate: 360,
     y: [0, -10, 0, -5, 0],
@@ -124,30 +135,31 @@ export const spinningBurgerVariants = {
       rotate: {
         duration: 2,
         repeat: Infinity,
-        ease: "linear" as any,
+        ease: "linear",
       },
       y: {
         duration: 1,
         repeat: Infinity,
-        ease: "easeInOut" as any,
+        ease: "easeInOut",
       },
     },
   },
 };
 
-// Button animation variants
-export const buttonPulseVariants = {
+// Button pulse
+export const buttonPulseVariants: Variants = {
   animate: {
     scale: [1, 1.07, 1],
     transition: {
       duration: 2,
       repeat: Infinity,
-      ease: "easeInOut" as any,
+      ease: "easeInOut",
     },
   },
 };
 
-export const buttonFlashVariants = {
+// Button flash
+export const buttonFlashVariants: Variants = {
   animate: {
     opacity: [1, 0.3, 1, 0.7, 1],
     boxShadow: [
@@ -158,12 +170,13 @@ export const buttonFlashVariants = {
     transition: {
       duration: 2,
       repeat: Infinity,
-      ease: "easeInOut" as any,
+      ease: "easeInOut",
     },
   },
 };
 
-export const backgroundCycleVariants = {
+// Background cycle
+export const backgroundCycleVariants: Variants = {
   animate: {
     backgroundColor: [
       "rgba(255, 0, 0, 0.8)",
@@ -174,11 +187,13 @@ export const backgroundCycleVariants = {
     transition: {
       duration: 5,
       repeat: Infinity,
-      ease: "easeInOut" as any,
+      ease: "easeInOut",
     },
   },
 };
-export const prophecyScrollVariants = {
+
+// Prophecy scroll
+export const prophecyScrollVariants: Variants = {
   animate: {
     backgroundColor: [
       "rgba(0, 0, 0, 0.3)",
@@ -189,7 +204,25 @@ export const prophecyScrollVariants = {
     transition: {
       duration: 8,
       repeat: Infinity,
-      ease: "easeInOut" as any,
+      ease: "easeInOut",
     },
+  },
+};
+
+// Fast shake
+const fastShakeTransition: Transition = {
+  duration: 0.25,
+  repeat: Infinity,
+  repeatType: "loop",
+  ease: "linear",
+};
+
+export const fastShakeVariants: Variants = {
+  initial: { x: 0, y: 0, rotate: 0 },
+  animate: {
+    x: [0, -6, 6, -6, 6, 0],
+    y: [0, -4, 4, -4, 4, 0],
+    rotate: [0, -1.5, 1.5, -1.5, 1.5, 0],
+    transition: fastShakeTransition,
   },
 };
