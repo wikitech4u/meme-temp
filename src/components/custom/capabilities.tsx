@@ -1,7 +1,5 @@
 "use client";
-import Image from "next/image";
 import React from "react";
-import Blur from "./blur";
 import { appConfig } from "@/config";
 import { motion } from "framer-motion";
 import {
@@ -169,7 +167,6 @@ const Capabilities = () => {
             variants={flashVariants}
             animate="animate"
             initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
           >
             <motion.p variants={colorCycleVariants} animate="animate">
