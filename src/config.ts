@@ -16,13 +16,13 @@ export const appConfig = {
     // Open Graph tags for social sharing
     openGraph: {
       title: "$FYH - official website",
-      description: "Meet Sample",
+      description: "The Revolution against system lies begin here",
       siteName: "$FYH",
       image: {
         url: "/banner-share.gif",
         width: 484,
         height: 482,
-        alt: "Sample - official website Sample",
+        alt: "$FYH - official website $FYH",
       },
       locale: "en_US",
       type: "website",
@@ -57,9 +57,9 @@ export const appConfig = {
       text: "Twitter",
     },
 
-    background: "/background.avif",
+    background: "/fullBackGround.jpg",
+    customCursorEmoji: "🖕🏼",
     chip: "/chip.avif",
-    banner: "/banner-2.avif",
     heroTitle: "FUCK YOU HIGHER",
     heroIcon: "🖕🏼",
     heroTicker: "$FYH",
@@ -69,7 +69,6 @@ export const appConfig = {
     feinModeDeactiveBTN: "DEACTIVATE FEIN MODE",
     activeAudioBTN: "AWAKEN MCSOUNDS",
     deActiveAudioBTN: "SILENCE MCSOUNDS",
-    subTitle: "The Revolution against system lies begin here",
   },
   social_section: {
     title: "HOME DIMENSION",
@@ -134,7 +133,9 @@ export const appConfig = {
       { src: "/float-7.avif", alt: "FLOATING MCDC SQUARE 7" },
     ],
   },
-
+  bottomTaskBarSection: {
+    title: "🖕🏼 $FYH COIN",
+  },
   footer: {
     title: "Join the $FYH",
     cards: [

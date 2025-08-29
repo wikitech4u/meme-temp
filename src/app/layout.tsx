@@ -59,10 +59,13 @@ export default function RootLayout({
         // style={{ backgroundImage: "url('/fullBackGround.jpg')" }}
       >
         <div className="fixed inset-0 -z-10">
-          <Blur img="/fullBackGround.jpg" />
+          <Blur img={appConfig.hero.background} />
         </div>
         <Navbar />
-        <CustomCursor emoji="🖕🏼" glowColor="#4ecdc4" />
+        <CustomCursor
+          emoji={appConfig.hero.customCursorEmoji}
+          glowColor="#4ecdc4"
+        />
         {children}
       </body>
     </html>

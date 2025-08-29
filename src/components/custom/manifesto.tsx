@@ -1,4 +1,5 @@
 "use client";
+import { appConfig } from "@/config";
 import { flashVariants, pulseVariants } from "@/lib/utils";
 
 import { motion } from "framer-motion";
@@ -67,7 +68,7 @@ const Manifesto = () => {
           variants={flashVariants}
           animate="animate"
         >
-          🖕🏼 $FYH COIN
+          {appConfig.bottomTaskBarSection.title}
         </motion.div>
       </div>
 
