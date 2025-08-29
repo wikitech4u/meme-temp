@@ -36,7 +36,7 @@ export const appConfig = {
       image: "",
     },
     // Other metadata
-    canonical: "https://sample-meme.vercel.app/",
+    canonical: "https://meme-test-lake.vercel.app/",
     themeColor: "#00cfff",
     icons: {
       icon: "/favicon.ico",
