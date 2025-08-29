@@ -19,7 +19,7 @@ export const appConfig = {
       description: "The Revolution against system lies begin here",
       siteName: "$FYH",
       image: {
-        url: "/banners.avif",
+        url: "/bannershare.gif",
         width: 484,
         height: 482,
         alt: "$FYH - official website $FYH",
