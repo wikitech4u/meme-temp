@@ -16,14 +16,9 @@ const CustomCursor: React.FC<CustomCursorProps> = ({
   const [isTouch, setIsTouch] = useState(false);
 
   useEffect(() => {
-    // Detect if the device supports touch
-    const hasTouch =
-      "ontouchstart" in window ||
-      navigator.maxTouchPoints > 0 ||
-      (navigator as any).msMaxTouchPoints > 0;
+    const hasTouch = "ontouchstart" in window || navigator.maxTouchPoints > 0;
     setIsTouch(hasTouch);
   }, []);
-
   // Don’t render on touch devices
   if (isTouch || !isVisible) return null;
 

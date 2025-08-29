@@ -2,7 +2,7 @@
 import { appConfig } from "@/config";
 import { flashVariants, pulseVariants } from "@/lib/utils";
 
-import { motion } from "framer-motion";
+import { motion, Variants } from "framer-motion";
 import { useEffect, useState } from "react";
 
 const Manifesto = () => {
@@ -17,7 +17,7 @@ const Manifesto = () => {
   }, []);
 
   // Format time as HH:MM:SS
-  const formatTime = (date: any) => {
+  const formatTime = (date: Date) => {
     return date.toLocaleTimeString("en-US", {
       hour12: false,
       hour: "2-digit",
@@ -26,14 +26,14 @@ const Manifesto = () => {
     });
   };
 
-  const timeFlashVariants = {
+  const timeFlashVariants: Variants = {
     animate: {
       opacity: [1, 0.5, 1],
       color: ["#FF0000", "#FFD700", "#FF0000"],
       transition: {
         duration: 2,
         repeat: Infinity,
-        ease: "easeInOut" as any,
+        ease: "easeInOut",
       },
     },
   };

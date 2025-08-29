@@ -18,7 +18,18 @@ interface UseCustomCursorReturn {
   trails: Trail[];
   isVisible: boolean;
 }
-
+const colors: string[] = [
+  "#ff6b6b",
+  "#4ecdc4",
+  "#45b7d1",
+  "#96ceb4",
+  "#feca57",
+  "#ff9ff3",
+  "#54a0ff",
+  "#5f27cd",
+  "#00d2d3",
+  "#ff9f43",
+];
 const useCustomCursor = (): UseCustomCursorReturn => {
   const [mousePosition, setMousePosition] = useState<MousePosition>({
     x: 0,
@@ -26,19 +37,6 @@ const useCustomCursor = (): UseCustomCursorReturn => {
   });
   const [trails, setTrails] = useState<Trail[]>([]);
   const [isVisible, setIsVisible] = useState<boolean>(false);
-
-  const colors: string[] = [
-    "#ff6b6b",
-    "#4ecdc4",
-    "#45b7d1",
-    "#96ceb4",
-    "#feca57",
-    "#ff9ff3",
-    "#54a0ff",
-    "#5f27cd",
-    "#00d2d3",
-    "#ff9f43",
-  ];
 
   const updateMousePosition = useCallback(
     (e: MouseEvent): void => {

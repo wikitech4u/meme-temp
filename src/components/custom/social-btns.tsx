@@ -1,12 +1,12 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { X, MessageCircle } from "lucide-react";
 import { flashVariants, pulseVariants } from "@/lib/utils";
 import Image from "next/image";
 import { appConfig } from "@/config";
 const SocialButtons = () => {
-  const [activeButton, setActiveButton] = React.useState("HOME DIMENSION");
+  const [activeButton, setActiveButton] = useState("HOME DIMENSION");
 
   const hoverVariants = {
     hover: {
